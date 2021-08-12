@@ -129,7 +129,7 @@ print.cv.dec <- function (x, ...) {
     df <- data.frame(paste0(names_pop_sync, " = ", pop_sync_val),
                      pop_sync_ind,
                      paste0(names_hamm, " = ", pop_sync_hamm))
-    colnames(df) <- c("Segrestin & Leps (2021)", "Rand", "Hammond et al. (2020)")
+    colnames(df) <- c("Segrestin & Leps (2021)", "Rand (95% CI)", "Hammond et al. (2020)")
   } else {
     df <- data.frame(paste0(names_pop_sync, " = ", pop_sync_val),
                      paste0(names_hamm, " = ", pop_sync_hamm))
