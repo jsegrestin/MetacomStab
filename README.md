@@ -1,4 +1,4 @@
-Partitionning the metacommunity $CV^2$
+Partitionning the metacommunity *CV*<sup>2</sup>
 ================
 
 This document illustrates how to use the R functions attached to
@@ -72,8 +72,8 @@ cv2_decomp(df)
     ##  pop.sync[indirect] = -0.0082 Beta[CCi] = 0.0485   
     ##  pop.sync[no] = 0.001         Beta[CCno] = 0.0055
 
-It returns the metacommunity $CV^2$, $Pop.var$,
-$Pop.sync$ and the four indices of $Pop.sync$
+It returns the metacommunity *CV*<sup>2</sup>, *Pop.var*,
+*Pop.sync* and the four indices of *Pop.sync*
 describing population synchrony at different spatial and organizational
 scales. The corresponding indices of asynchrony described in [Hammond
 *et al.* (2020) *Ecosphere*](https://www.doi.org/10.1002/ecs2.3078%5D)
@@ -99,5 +99,5 @@ cv2_decomp(df, nrand = 10000)
     ##  pop.sync[indirect] = -0.0082 [-0.004; 0.0045]  Beta[CCi] = 0.0485   
     ##  pop.sync[no] = 0.001         [-0.0015; 0.0014] Beta[CCno] = 0.0055
 
-It now includes the 95% confidence interval of $Pop.sync$
+It now includes the 95% confidence interval of *Pop.sync*
 values corresponding to independent fluctuations between populations.
