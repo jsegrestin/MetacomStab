@@ -76,12 +76,12 @@ It returns the metacommunity *CV*<sup>2</sup>, *Pop.var*,
 *Pop.sync* and the four indices of *Pop.sync*
 describing population synchrony at different spatial and organizational
 scales. The corresponding indices of asynchrony described in [Hammond
-*et al.* (2020) *Ecosphere*](https://www.doi.org/10.1002/ecs2.3078%5D)
+*et al.* (2020) *Ecosphere*](https://www.doi.org/10.1002/ecs2.3078)
 are also given.
 
-If you want to include a randomization procedure to estimate the range
-of independent fluctuation for population synchrony, use the argument
-`nrand`
+If you want to include a randomization procedure to estimate the range of
+*pop.sync* under the hypothesis of independent fluctuations between
+populations, use the argument `nrand`
 
 ``` r
 cv2_decomp(df, nrand = 10000)
@@ -93,7 +93,7 @@ cv2_decomp(df, nrand = 10000)
     ## 
     ## CV2 = 0.0026, Pop.var = 0.0059, Pop.sync = -0.0033 [-0.0044; 0.0059]
     ## 
-    ##  Segrestin & Leps (2021)      Rand              Hammond et al. (2020)
+    ##  Segrestin & Leps (2021)      Rand (95% CI)     Hammond et al. (2020)
     ##  Pop.sync[direct] = -0.003    [-0.0025; 0.0029] Delta = 0.0186       
     ##  Pop.sync[intra] = 0.0068     [-0.0024; 0.0031] Beta[MP] = 0.0112    
     ##  pop.sync[indirect] = -0.0082 [-0.004; 0.0045]  Beta[CCi] = 0.0485   
@@ -101,3 +101,5 @@ cv2_decomp(df, nrand = 10000)
 
 It now includes the 95% confidence interval of *Pop.sync*
 values corresponding to independent fluctuations between populations.
+Observed values out of the range are significantly different from zero. 
+Positive or negative values represent prevalent synchrony or anti-synchrony between populations, respectively.
