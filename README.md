@@ -19,7 +19,7 @@ productivity of 19 populations of 9 species (A, B, C, …, I) for 7 years
 (Y1 to Y7)
 
 ``` r
-print(df, row.names = F, right = F)
+print(data, row.names = F, right = F)
 ```
 
     ##  Community Species Y1 Y2 Y3 Y4 Y5 Y6 Y7
@@ -43,6 +43,8 @@ print(df, row.names = F, right = F)
     ##  C4        H        0  2  0  1  0  0  0
     ##  C4        I       12  7  8  6 10  9  4
 
+This dummy data set can be downloaded [here](https://raw.githubusercontent.com/jsegrestin/MetacomStab/master/data/dummy_data.csv)
+
 ## Run the function
 
 You can source the `R` functions from GitHub using the following code
@@ -53,11 +55,11 @@ url <- "https://raw.githubusercontent.com/jsegrestin/MetacomStab/master/R/functi
 devtools::source_url(url)
 ```
 
-Once the functions are loaded, you can run `cv2_decomp()` using the
+Once the functions and the data set are loaded, you can run `cv2_decomp()` using the
 prepared data set
 
 ``` r
-cv2_decomp(df)
+cv2_decomp(data)
 ```
 
     ## 
@@ -84,7 +86,7 @@ If you want to include a randomization procedure to estimate the range of
 populations, use the argument `nrand`
 
 ``` r
-cv2_decomp(df, nrand = 10000)
+cv2_decomp(data, nrand = 10000)
 ```
 
     ## 

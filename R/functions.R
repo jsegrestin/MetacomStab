@@ -20,6 +20,8 @@ cv2_decomp <- function(data, nrand = NA){
   data$Species <- as.factor(data$Species)
   data$Community <- as.factor(data$Community)
   X <- data[, !colnames(data) %in% c("Species", "Community")]
+  n <- sum(rowSums(X) == 0)
+  if(n > 0) message(paste(n, "row(s) with no biomass were ommited"))
   data <- data[rowSums(X) != 0, ]
   X <- data[, !colnames(data) %in% c("Species", "Community")]
   
