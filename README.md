@@ -9,11 +9,11 @@ types of synchronies on metacommunity stability.
 ## Data preparation
 
 The data set should be a `data.frame`. Column names must include
-`Community` and `Species`. Annual biomass of individual populations must
+`Community` and `Species`. The annual biomass of individual populations must
 be organized in columns (one column per year). No extra column is
 allowed.
 
-The following dummy data set shows the required format for an fictitious
+The following dummy data set shows the required format for a fictitious
 metacommunity of 4 communities (C1 to C4) including the biomass
 productivity of 19 populations of 9 species (A, B, C, …, I) for 7 years
 (Y1 to Y7)
