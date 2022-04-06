@@ -1,5 +1,6 @@
 Partitionning the metacommunity *CV*<sup>2</sup>
 ================
+[![DOI](https://zenodo.org/badge/395247518.svg)](https://zenodo.org/badge/latestdoi/395247518)
 
 This document illustrates how to use the R functions attached to
 Segrestin & Lepš (2022) <i>Journal of Ecology</i>. We propose a framework aiming at
