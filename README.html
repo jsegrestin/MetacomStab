@@ -169,11 +169,11 @@ pre code {
 
 <div id="partitionning-the-metacommunity-cv2" class="section level1">
 <h1>Partitionning the metacommunity <em>CV</em><sup>2</sup></h1>
-<p>This document illustrates how to use the R functions attached to Segrestin &amp; Leps (in prep). We propose a framework aiming at disentangling the relative effects of population stability and different types of synchronies on metacommunity stability.</p>
+<p>This document illustrates how to use the R functions attached to Segrestin &amp; Lepš (2022) <i>Journal of Ecology</i>. We propose a framework aiming at disentangling the relative effects of population stability and different types of synchronies on metacommunity stability.</p>
 <div id="data-preparation" class="section level2">
 <h2>Data preparation</h2>
-<p>The data set should be a <code>data.frame</code>. Column names must include <code>Community</code> and <code>Species</code>. Annual biomass of individual populations must be organized in columns (one column per year). No extra column is allowed.</p>
-<p>The following dummy data set shows the required format for an fictitious metacommunity of 4 communities (C1 to C4) including the biomass productivity of 19 populations of 9 species (A, B, C, …, I) for 7 years (Y1 to Y7)</p>
+<p>The data set should be a <code>data.frame</code>. Column names must include <code>Community</code> and <code>Species</code>. The annual biomass of individual populations must be organized in columns (one column per year). No extra column is allowed.</p>
+<p>The following dummy data set shows the required format for a fictitious metacommunity of 4 communities (C1 to C4) including the biomass productivity of 19 populations of 9 species (A, B, C, …, I) for 7 years (Y1 to Y7)</p>
 <pre class="r"><code>print(data, row.names = F, right = F)</code></pre>
 <pre><code>##  Community Species Y1 Y2 Y3 Y4 Y5 Y6 Y7
 ##  C1        A       10  8  7 12 15 13 10
@@ -207,11 +207,11 @@ devtools::source_url(url)</code></pre>
 <pre class="r"><code>cv2_decomp(data)</code></pre>
 <pre><code>## 
 ## Decomposition of the metacommunity squared coefficient of variation
-## See Segrestin &amp; Leps (2021)
+## See Segrestin &amp; Leps (2022)
 ## 
 ## CV2 = 0.0026, Pop.var = 0.0059, Pop.sync = -0.0033
 ## 
-##  Segrestin &amp; Leps (2021)      Hammond et al. (2020)
+##  Segrestin &amp; Leps (2022)      Hammond et al. (2020)
 ##  Pop.sync[direct] = -0.003    Delta = 0.0186       
 ##  Pop.sync[intra] = 0.0068     Beta[MP] = 0.0112    
 ##  pop.sync[indirect] = -0.0082 Beta[CCi] = 0.0485   
@@ -221,11 +221,11 @@ devtools::source_url(url)</code></pre>
 <pre class="r"><code>cv2_decomp(data, nrand = 10000)</code></pre>
 <pre><code>## 
 ## Decomposition of the metacommunity squared coefficient of variation
-## See Segrestin &amp; Leps (2021)
+## See Segrestin &amp; Leps (2022)
 ## 
 ## CV2 = 0.0026, Pop.var = 0.0059, Pop.sync = -0.0033 [-0.0044; 0.0059]
 ## 
-##  Segrestin &amp; Leps (2021)      Rand (95% CI)     Hammond et al. (2020)
+##  Segrestin &amp; Leps (2022)      Rand (95% CI)     Hammond et al. (2020)
 ##  Pop.sync[direct] = -0.003    [-0.0025; 0.0029] Delta = 0.0186       
 ##  Pop.sync[intra] = 0.0068     [-0.0024; 0.0031] Beta[MP] = 0.0112    
 ##  pop.sync[indirect] = -0.0082 [-0.004; 0.0045]  Beta[CCi] = 0.0485   

@@ -2,7 +2,7 @@ Partitionning the metacommunity *CV*<sup>2</sup>
 ================
 
 This document illustrates how to use the R functions attached to
-Segrestin & Leps (in prep). We propose a framework aiming at
+Segrestin & Lepš (2022) <i>Journal of Ecology</i>. We propose a framework aiming at
 disentangling the relative effects of population stability and different
 types of synchronies on metacommunity stability.
 
@@ -64,11 +64,11 @@ cv2_decomp(data)
 
     ## 
     ## Decomposition of the metacommunity squared coefficient of variation
-    ## See Segrestin & Leps (2021)
+    ## See Segrestin & Leps (2022)
     ## 
     ## CV2 = 0.0026, Pop.var = 0.0059, Pop.sync = -0.0033
     ## 
-    ##  Segrestin & Leps (2021)      Hammond et al. (2020)
+    ##  Segrestin & Leps (2022)      Hammond et al. (2020)
     ##  Pop.sync[direct] = -0.003    Delta = 0.0186       
     ##  Pop.sync[intra] = 0.0068     Beta[MP] = 0.0112    
     ##  pop.sync[indirect] = -0.0082 Beta[CCi] = 0.0485   
@@ -91,11 +91,11 @@ cv2_decomp(data, nrand = 10000)
 
     ## 
     ## Decomposition of the metacommunity squared coefficient of variation
-    ## See Segrestin & Leps (2021)
+    ## See Segrestin & Leps (2022)
     ## 
     ## CV2 = 0.0026, Pop.var = 0.0059, Pop.sync = -0.0033 [-0.0044; 0.0059]
     ## 
-    ##  Segrestin & Leps (2021)      Rand (95% CI)     Hammond et al. (2020)
+    ##  Segrestin & Leps (2022)      Rand (95% CI)     Hammond et al. (2020)
     ##  Pop.sync[direct] = -0.003    [-0.0025; 0.0029] Delta = 0.0186       
     ##  Pop.sync[intra] = 0.0068     [-0.0024; 0.0031] Beta[MP] = 0.0112    
     ##  pop.sync[indirect] = -0.0082 [-0.004; 0.0045]  Beta[CCi] = 0.0485   

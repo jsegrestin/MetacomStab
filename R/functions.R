@@ -107,7 +107,7 @@ cv2_decomp <- function(data, nrand = NA){
 
 print.cv.dec <- function (x, ...) {
   cat("\nDecomposition of the metacommunity squared coefficient of variation")
-  cat("\nSee Segrestin & Leps (2021)")
+  cat("\nSee Segrestin & Leps (2022)")
   cat("\n")
   pop_sync <- x$Pop_sync_intra[1] + x$Pop_sync_direct[1] + x$pop_sync_indirect[1] + x$pop_sync_no[1]
   if ("rand" %in% names(x)) {
@@ -131,11 +131,11 @@ print.cv.dec <- function (x, ...) {
     df <- data.frame(paste0(names_pop_sync, " = ", pop_sync_val),
                      pop_sync_ind,
                      paste0(names_hamm, " = ", pop_sync_hamm))
-    colnames(df) <- c("Segrestin & Leps (2021)", "Rand (95% CI)", "Hammond et al. (2020)")
+    colnames(df) <- c("Segrestin & Leps (2022)", "Rand (95% CI)", "Hammond et al. (2020)")
   } else {
     df <- data.frame(paste0(names_pop_sync, " = ", pop_sync_val),
                      paste0(names_hamm, " = ", pop_sync_hamm))
-    colnames(df) <- c("Segrestin & Leps (2021)", "Hammond et al. (2020)")
+    colnames(df) <- c("Segrestin & Leps (2022)", "Hammond et al. (2020)")
   }
   
   cat("\n")
